@@ -21,11 +21,11 @@ from nltk.corpus import stopwords
 # DB connect
 if sys.platform in ['Windows', 'win32', 'cygwin']:
     mydb = mysql.connector.connect(
-    host = "database-1.criq1nathhcp.us-west-2.rds.amazonaws.com",
-    user = "admin",
-    password = "5HjTd1Fr7e3DS",
-    database = "affiliate",
-    port=33360
+    host = "",
+    user = "",
+    password = "",
+    database = "",
+    port=
     )
 else:
     mydb = mysql.connector.connect(
@@ -55,9 +55,9 @@ URL = producturl
 headinfo={
     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Encoding":"gzip, deflate, br",
-"Accept-Language":"en-US,en;q=0.5",
-"Connection":'keep-alive',
-"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0"
+    "Accept-Language":"en-US,en;q=0.5",
+    "Connection":'keep-alive',
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0"
 }
 page = requests.get(URL,headers=headinfo).content
 soup = BeautifulSoup(page, 'html.parser')
